@@ -61,7 +61,7 @@ const updateTask = shipit => {
       const options = _.get(shipit.config, 'deploy.remoteCopy') || {
         rsync: '--del',
       }
-      const rsyncFrom = shipit.config.rsyncFrom || shipit.workspace
+      const rsyncFrom = shipit.config.rsyncFrom || shipit.config.workspace
       const uploadDirPath = path.resolve(
         rsyncFrom,
         shipit.config.dirToCopy || '',
